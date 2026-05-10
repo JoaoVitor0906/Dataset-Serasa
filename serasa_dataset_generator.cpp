@@ -206,6 +206,37 @@ int main() {
     cout << "\n✓ Conjunto de dados gerado com sucesso!" << endl;
     cout << "Arquivo salvo como: serasa_dataset.csv" << endl;
     cout << "Total de registros: " << RECORDS << endl;
+
+    // Exibir os primeiros 5 registros em uma tabela formatada
+    cout << "\n--- Amostra dos Dados Gerados (5 primeiros registros) ---\n";
+    cout << left << setw(5) << "ID" << setw(20) << "Nome" << setw(15) << "CPF" << setw(15) << "Score" << setw(10) << "Status" << endl;
+    cout << string(65, '-') << endl;
+
+    ifstream readFile("serasa_dataset.csv");
+    string line;
+    getline(readFile, line); // Pular cabeçalho
+
+    for (int i = 0; i < 5; ++i) {
+        getline(readFile, line);
+        stringstream ss(line);
+        string id, nome, cpf, email, telefone, dataNascimento, renda, score, contas, dias, divida, status;
+        
+        getline(ss, id, ',');
+        getline(ss, nome, ',');
+        getline(ss, cpf, ',');
+        getline(ss, email, ',');
+        getline(ss, telefone, ',');
+        getline(ss, dataNascimento, ',');
+        getline(ss, renda, ',');
+        getline(ss, score, ',');
+        getline(ss, contas, ',');
+        getline(ss, dias, ',');
+        getline(ss, divida, ',');
+        getline(ss, status, '\n');
+
+        cout << left << setw(5) << id << setw(20) << nome << setw(15) << cpf << setw(15) << score << setw(10) << status << endl;
+    }
+    readFile.close();
     
     return 0;
 }
