@@ -5,6 +5,7 @@
 #include <vector>
 #include <iomanip>
 #include <ctime>
+#include <cstdlib>
 
 using namespace std;
 
@@ -238,5 +239,6 @@ int main() {
     }
     readFile.close();
     
+    system("pause");
     return 0;
 }
