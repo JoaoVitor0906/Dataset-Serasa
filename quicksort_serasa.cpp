@@ -165,7 +165,7 @@ void exibirAmostra(const vector<Registro>& registros, int quantidade = 5) {
 
 int main() {
     cout << "╔════════════════════════════════════════════════════════════╗" << endl;
-    cout << "║  QUICK SORT - MÉTODO DE HOARE - DATASET SERASA           ║" << endl;
+    cout << "║  QUICK SORT - MÉTODO DE HOARE - DATASET SERASA             ║" << endl;
     cout << "╚════════════════════════════════════════════════════════════╝" << endl;
 
     vector<Registro> registros;
